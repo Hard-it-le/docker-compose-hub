@@ -1,0 +1,72 @@
+version: '3.2'
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.17.4
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - ./es/plugins:/usr/share/elasticsearch/plugins #插件文件挂载
+      - ./es/data:/usr/share/elasticsearch/data #数据文件挂载
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    container_name: elasticsearch
+    restart: always
+    environment:
+      - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
+      - "discovery.type=single-node" #以单一节点模式启动
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m" #设置使用jvm内存大小
+    networks:
+      - elk
+
+  # logstash:
+  #   image: logstash:7.17.4
+  #   container_name: logstash
+  #   volumes:
+  #     - /etc/localtime:/etc/localtime
+  #   #   - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro,Z
+  #     - ./log/conf/logstash.conf:/usr/share/logstash/pipeline/logstash.conf #挂载logstash的配置文件
+  #   ports:
+  #     - "5044:5044"
+  #     - "50000:50000/tcp"
+  #     - "50000:50000/udp"
+  #     - "9600:9600"
+  #   environment:
+  #     LS_JAVA_OPTS: -Xms256m -Xmx256m
+  #   links:
+  #     - elasticsearch:es #可以用es这个域名访问elasticsearch服务
+  #   networks:
+  #     - elk
+  #   depends_on:
+  #     - elasticsearch
+
+  kibana:
+    image: kibana:7.17.4
+    container_name: kibana
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - "5601:5601"
+    links:
+      - elasticsearch:es #可以用es这个域名访问elasticsearch服务
+    environment:
+       - ELASTICSEARCH_URL=http://elasticsearch:9200 #设置访问elasticsearch的地址
+       - "elasticsearch.hosts=http://es:9200" #设置访问elasticsearch的地址
+       - I18N_LOCALE=zh-CN
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+networks:
+  elk:
+    driver: bridge
+
+
+#  ik 分词器的安装
+
+# 集群 docker-compose exec elasticsearch elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.4/elasticsearch-analysis-ik-7.17.4.zip
+
+# 单点 bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.4/elasticsearch-analysis-ik-7.17.4.zip

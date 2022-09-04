@@ -1,0 +1,13 @@
+.DS_Store
+/es-kibana/es
+/mongoDB/config
+/mongoDB/db
+/mongoDB/log
+/mysql/data
+/mysql/init
+/neo4j/data
+/neo4j/logs
+/zk-kafka/zookeeper/data
+/zk-kafka/zookeeper/datalog
+/zk-kafka/zookeeper/logs
+/zk-kafka/kafka

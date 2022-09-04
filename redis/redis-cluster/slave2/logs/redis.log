@@ -1,0 +1,54 @@
+1:C 02 Sep 2022 22:44:28.367 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 02 Sep 2022 22:44:28.372 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 02 Sep 2022 22:44:28.381 # Configuration loaded
+1:M 02 Sep 2022 22:44:28.390 * monotonic clock: POSIX clock_gettime
+1:M 02 Sep 2022 22:44:28.427 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 02 Sep 2022 22:44:28.433 * Running mode=standalone, port=6379.
+1:M 02 Sep 2022 22:44:28.443 # Server initialized
+1:M 02 Sep 2022 22:44:28.449 * Ready to accept connections
+1:C 02 Sep 2022 22:50:16.090 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 02 Sep 2022 22:50:16.113 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 02 Sep 2022 22:50:16.147 # Configuration loaded
+1:M 02 Sep 2022 22:50:16.154 * monotonic clock: POSIX clock_gettime
+1:M 02 Sep 2022 22:50:16.186 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 02 Sep 2022 22:50:16.195 * Running mode=standalone, port=6379.
+1:M 02 Sep 2022 22:50:16.200 # Server initialized
+1:M 02 Sep 2022 22:50:16.209 * Ready to accept connections
+1:C 02 Sep 2022 22:51:37.729 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 02 Sep 2022 22:51:37.739 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 02 Sep 2022 22:51:37.752 # Configuration loaded
+1:M 02 Sep 2022 22:51:37.792 * monotonic clock: POSIX clock_gettime
+1:M 02 Sep 2022 22:51:37.810 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 02 Sep 2022 22:51:37.814 * Running mode=standalone, port=6379.
+1:M 02 Sep 2022 22:51:37.819 # Server initialized
+1:M 02 Sep 2022 22:51:37.824 * Ready to accept connections
+1:signal-handler (1662182790) Received SIGTERM scheduling shutdown...
+1:M 03 Sep 2022 13:26:30.820 # User requested shutdown...
+1:M 03 Sep 2022 13:26:30.825 * Calling fsync() on the AOF file.
+1:M 03 Sep 2022 13:26:30.829 * Saving the final RDB snapshot before exiting.
+1:M 03 Sep 2022 13:26:30.838 * DB saved on disk
+1:M 03 Sep 2022 13:26:30.842 * Removing the pid file.
+1:M 03 Sep 2022 13:26:30.844 # Redis is now ready to exit, bye bye...
+1:C 03 Sep 2022 13:26:35.229 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 03 Sep 2022 13:26:35.235 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 03 Sep 2022 13:26:35.241 # Configuration loaded
+1:M 03 Sep 2022 13:26:35.246 * monotonic clock: POSIX clock_gettime
+1:M 03 Sep 2022 13:26:35.252 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 03 Sep 2022 13:26:35.257 * Running mode=standalone, port=6379.
+1:M 03 Sep 2022 13:26:35.269 # Server initialized
+1:M 03 Sep 2022 13:26:35.285 * Ready to accept connections
+1:signal-handler (1662182798) Received SIGTERM scheduling shutdown...
+1:M 03 Sep 2022 13:26:38.174 # User requested shutdown...
+1:M 03 Sep 2022 13:26:38.177 * Calling fsync() on the AOF file.
+1:M 03 Sep 2022 13:26:38.183 * Saving the final RDB snapshot before exiting.
+1:M 03 Sep 2022 13:26:38.188 * DB saved on disk
+1:M 03 Sep 2022 13:26:38.190 * Removing the pid file.
+1:M 03 Sep 2022 13:26:38.195 # Redis is now ready to exit, bye bye...
+1:C 04 Sep 2022 10:17:32.987 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 04 Sep 2022 10:17:32.992 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 04 Sep 2022 10:17:32.997 # Configuration loaded
+1:M 04 Sep 2022 10:17:33.003 * monotonic clock: POSIX clock_gettime
+1:M 04 Sep 2022 10:17:33.012 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 04 Sep 2022 10:17:33.015 * Running mode=standalone, port=6379.
+1:M 04 Sep 2022 10:17:33.019 # Server initialized
+1:M 04 Sep 2022 10:17:33.024 * Ready to accept connections
