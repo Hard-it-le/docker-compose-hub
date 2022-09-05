@@ -1,0 +1,6 @@
+- pipeline.id: user-action
+  path.config: /usr/share/logstash/pipeline/logstash-user-action.conf
+  pipeline.workers: 3
+- pipeline.id: audit
+  path.config: /usr/share/logstash/pipeline/logstash-audit.conf
+  pipeline.workers: 3
