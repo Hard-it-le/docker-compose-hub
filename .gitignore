@@ -1,6 +1,6 @@
 .DS_Store
 /es-kibana/es
-/es-kibana/authing/log/
+/es-kibana/authing
 /mongoDB/config
 /mongoDB/db
 /mongoDB/log
