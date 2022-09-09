@@ -1,5 +1,6 @@
 .DS_Store
 /es-kibana/es
+/es-kibana/authing/log/
 /mongoDB/config
 /mongoDB/db
 /mongoDB/log
@@ -11,4 +12,3 @@
 /zk-kafka/zookeeper/datalog
 /zk-kafka/zookeeper/logs
 /zk-kafka/kafka
-/authing/log
