@@ -15,7 +15,7 @@ services:
     environment:
       - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
       - "discovery.type=single-node" #以单一节点模式启动
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m" #设置使用jvm内存大小
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m" #设置使用jvm内存大小
     networks:
       - elk
 
@@ -27,14 +27,14 @@ services:
       - "./logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml"
       - "./logstash/logstash-audit.conf:/usr/share/logstash/pipeline/logstash-audit.conf"
       - "./logstash/logstash-user-action.conf:/usr/share/logstash/pipeline/logstash-user-action.conf"
-      # - "/home/lihuiwang/authing/log:/var/log/authing-server"
+      - "/Users/yujiale/docker/es-kibana/authing/log:/var/log/authing-server"
     ports:
       - "5044:5044"
       - "50000:50000/tcp"
       - "50000:50000/udp"
       - "9600:9600"
     environment:
-      LS_JAVA_OPTS: -Xms256m -Xmx256m
+      LS_JAVA_OPTS: -Xms1024m -Xmx1024m
       TZ: Asia/Shanghai
       MONITORING_ENABLED: false
     links:

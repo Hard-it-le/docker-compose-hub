@@ -52,3 +52,34 @@
 1:M 04 Sep 2022 10:17:33.015 * Running mode=standalone, port=6379.
 1:M 04 Sep 2022 10:17:33.019 # Server initialized
 1:M 04 Sep 2022 10:17:33.024 * Ready to accept connections
+1:C 08 Sep 2022 20:46:52.743 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 08 Sep 2022 20:46:52.758 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 08 Sep 2022 20:46:52.786 # Configuration loaded
+1:M 08 Sep 2022 20:46:52.793 * monotonic clock: POSIX clock_gettime
+1:M 08 Sep 2022 20:46:52.807 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 08 Sep 2022 20:46:52.814 * Running mode=standalone, port=6379.
+1:M 08 Sep 2022 20:46:52.822 # Server initialized
+1:M 08 Sep 2022 20:46:52.833 * Ready to accept connections
+1:C 09 Sep 2022 00:46:13.369 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 09 Sep 2022 00:46:13.437 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 09 Sep 2022 00:46:13.475 # Configuration loaded
+1:M 09 Sep 2022 00:46:13.513 * monotonic clock: POSIX clock_gettime
+1:M 09 Sep 2022 00:46:13.568 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 09 Sep 2022 00:46:13.605 * Running mode=standalone, port=6379.
+1:M 09 Sep 2022 00:46:13.656 # Server initialized
+1:M 09 Sep 2022 00:46:13.665 * Ready to accept connections
+1:signal-handler (1662655602) Received SIGTERM scheduling shutdown...
+1:M 09 Sep 2022 00:46:42.017 # User requested shutdown...
+1:M 09 Sep 2022 00:46:42.021 * Calling fsync() on the AOF file.
+1:M 09 Sep 2022 00:46:42.023 * Saving the final RDB snapshot before exiting.
+1:M 09 Sep 2022 00:46:42.032 * DB saved on disk
+1:M 09 Sep 2022 00:46:42.036 * Removing the pid file.
+1:M 09 Sep 2022 00:46:42.041 # Redis is now ready to exit, bye bye...
+1:C 09 Sep 2022 10:44:20.913 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 09 Sep 2022 10:44:20.917 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 09 Sep 2022 10:44:20.923 # Configuration loaded
+1:M 09 Sep 2022 10:44:20.931 * monotonic clock: POSIX clock_gettime
+1:M 09 Sep 2022 10:44:20.936 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 09 Sep 2022 10:44:20.941 * Running mode=standalone, port=6379.
+1:M 09 Sep 2022 10:44:20.944 # Server initialized
+1:M 09 Sep 2022 10:44:20.949 * Ready to accept connections
