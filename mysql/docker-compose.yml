@@ -9,15 +9,12 @@ services:
       - ./my.cnf:/etc/mysql/my.cnf
       - ./init:/docker-entrypoint-initdb.d/
     ports:
-      - '3306:3306'  #“宿主机端口号：容器内端口号”
-    command:
-      --default-authentication-plugin=mysql_native_password
-      --character-set-server=utf8mb4
-      --collation-server=utf8mb4_general_ci
-      --explicit_defaults_for_timestamp=true
-      --lower_case_table_names=1
+      - '3306:3306' #“宿主机端口号：容器内端口号”
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --explicit_defaults_for_timestamp=true --lower_case_table_names=1
     environment:
       TZ: Asia/Shanghai
       MYSQL_ROOT_PASSWORD: "dockerroot"
-      MYSQL_USER: 'root'  # 创建普通用户
-      MYSQL_PASSWORD: 'dockerroot'     #普通用户密码
+      MYSQL_USER: 'root' # 创建普通用户
+      MYSQL_PASSWORD: 'dockerroot' #普通用户密码
+    networks:
+      - env

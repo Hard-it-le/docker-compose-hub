@@ -22,12 +22,13 @@ services:
   logstash:
     image: logstash:7.17.4
     container_name: logstash
+    restart: always
     volumes:
       - /etc/localtime:/etc/localtime
       - "./logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml"
       - "./logstash/logstash-audit.conf:/usr/share/logstash/pipeline/logstash-audit.conf"
       - "./logstash/logstash-user-action.conf:/usr/share/logstash/pipeline/logstash-user-action.conf"
-      - "/Users/yujiale/docker/es-kibana/authing/log:/var/log/authing-server"
+      - "./authing/log:/var/log/authing-server"
     ports:
       - "5044:5044"
       - "50000:50000/tcp"
@@ -56,9 +57,9 @@ services:
     links:
       - elasticsearch:es #可以用es这个域名访问elasticsearch服务
     environment:
-       - ELASTICSEARCH_URL=http://elasticsearch:9200 #设置访问elasticsearch的地址
-       - "elasticsearch.hosts=http://es:9200" #设置访问elasticsearch的地址
-       - I18N_LOCALE=zh-CN
+      - ELASTICSEARCH_URL=http://elasticsearch:9200 #设置访问elasticsearch的地址
+      - "elasticsearch.hosts=http://es:9200" #设置访问elasticsearch的地址
+      - I18N_LOCALE=zh-CN
     networks:
       - elk
     depends_on:
@@ -66,11 +67,10 @@ services:
 
 networks:
   elk:
+    name: elk
     driver: bridge
+      #  ik 分词器的安装
 
+      # 集群 docker-compose exec elasticsearch elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.4/elasticsearch-analysis-ik-7.17.4.zip
 
-#  ik 分词器的安装
-
-# 集群 docker-compose exec elasticsearch elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.4/elasticsearch-analysis-ik-7.17.4.zip
-
-# 单点 bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.4/elasticsearch-analysis-ik-7.17.4.zip
+      # 单点 bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.4/elasticsearch-analysis-ik-7.17.4.zip

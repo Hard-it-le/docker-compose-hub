@@ -13,7 +13,7 @@ services:
       - ./zookeeper/datalog:/datalog
     container_name: zookeeper
     networks:
-        - kafka-net
+      - zk-kafka
 
   kafka:
     image: wurstmeister/kafka
@@ -26,14 +26,14 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: "127.0.0.1"
       KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
     volumes:
-      -  ./kafka:/kafka
+      - ./kafka:/kafka
     depends_on:
       - zookeeper
     container_name: kafka
     networks:
-        - kafka-net
+      - zk-kafka
 
 networks:
-  kafka-net:
-    name: kafka-net
+  zk-kafka:
+    name: zk-kafka
     driver: bridge

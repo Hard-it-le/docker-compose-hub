@@ -83,3 +83,33 @@
 1:M 09 Sep 2022 10:44:20.972 * Running mode=standalone, port=6379.
 1:M 09 Sep 2022 10:44:20.975 # Server initialized
 1:M 09 Sep 2022 10:44:20.981 * Ready to accept connections
+1:C 10 Sep 2022 15:08:26.712 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 10 Sep 2022 15:08:26.718 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 10 Sep 2022 15:08:26.726 # Configuration loaded
+1:M 10 Sep 2022 15:08:26.742 * monotonic clock: POSIX clock_gettime
+1:M 10 Sep 2022 15:08:26.751 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 10 Sep 2022 15:08:26.755 * Running mode=standalone, port=6379.
+1:M 10 Sep 2022 15:08:26.758 # Server initialized
+1:M 10 Sep 2022 15:08:26.779 * Ready to accept connections
+1:signal-handler (1662796997) Received SIGTERM scheduling shutdown...
+1:M 10 Sep 2022 16:03:17.678 # User requested shutdown...
+1:M 10 Sep 2022 16:03:17.681 * Calling fsync() on the AOF file.
+1:M 10 Sep 2022 16:03:17.683 * Saving the final RDB snapshot before exiting.
+1:M 10 Sep 2022 16:03:17.690 * DB saved on disk
+1:M 10 Sep 2022 16:03:17.692 * Removing the pid file.
+1:M 10 Sep 2022 16:03:17.694 # Redis is now ready to exit, bye bye...
+1:C 10 Sep 2022 16:21:41.996 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 10 Sep 2022 16:21:42.000 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 10 Sep 2022 16:21:42.004 # Configuration loaded
+1:M 10 Sep 2022 16:21:42.016 * monotonic clock: POSIX clock_gettime
+1:M 10 Sep 2022 16:21:42.026 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 10 Sep 2022 16:21:42.034 * Running mode=standalone, port=6379.
+1:M 10 Sep 2022 16:21:42.039 # Server initialized
+1:M 10 Sep 2022 16:21:42.050 * Ready to accept connections
+1:signal-handler (1662810667) Received SIGTERM scheduling shutdown...
+1:M 10 Sep 2022 19:51:07.775 # User requested shutdown...
+1:M 10 Sep 2022 19:51:07.778 * Calling fsync() on the AOF file.
+1:M 10 Sep 2022 19:51:07.781 * Saving the final RDB snapshot before exiting.
+1:M 10 Sep 2022 19:51:07.790 * DB saved on disk
+1:M 10 Sep 2022 19:51:07.793 * Removing the pid file.
+1:M 10 Sep 2022 19:51:07.796 # Redis is now ready to exit, bye bye...

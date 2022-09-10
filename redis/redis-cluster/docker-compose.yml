@@ -14,7 +14,7 @@ services:
       - ./master/conf/redis.conf:/etc/redis/redis.conf
       - ./master/data:/data
       - ./master/logs:/logs
-    command: ["redis-server", "/etc/redis/redis.conf"]
+    command: [ "redis-server", "/etc/redis/redis.conf" ]
     privileged: true
     networks:
       - redis-cluster
@@ -31,7 +31,7 @@ services:
       - ./slave1/conf/redis.conf:/etc/redis/redis.conf
       - ./slave1/data:/data
       - ./slave1/logs:/logs
-    command: ["redis-server", "/etc/redis/redis.conf"]
+    command: [ "redis-server", "/etc/redis/redis.conf" ]
     depends_on:
       - redis-master
     privileged: true
@@ -50,7 +50,7 @@ services:
       - ./slave2/conf/redis.conf:/etc/redis/redis.conf
       - ./slave2/data:/data
       - ./slave2/logs:/logs
-    command: ["redis-server", "/etc/redis/redis.conf"]
+    command: [ "redis-server", "/etc/redis/redis.conf" ]
     depends_on:
       - redis-master
     privileged: true
@@ -59,4 +59,5 @@ services:
 
 networks:
   redis-cluster:
+    name: redis-cluster
     driver: bridge
