@@ -129,3 +129,27 @@
 1:M 11 Sep 2022 18:15:37.025 * Running mode=standalone, port=6379.
 1:M 11 Sep 2022 18:15:37.027 # Server initialized
 1:M 11 Sep 2022 18:15:37.033 * Ready to accept connections
+1:C 13 Sep 2022 10:58:38.745 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 13 Sep 2022 10:58:38.752 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 13 Sep 2022 10:58:38.755 # Configuration loaded
+1:M 13 Sep 2022 10:58:38.759 * monotonic clock: POSIX clock_gettime
+1:M 13 Sep 2022 10:58:38.766 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 13 Sep 2022 10:58:38.769 * Running mode=standalone, port=6379.
+1:M 13 Sep 2022 10:58:38.772 # Server initialized
+1:M 13 Sep 2022 10:58:38.778 * Ready to accept connections
+1:C 13 Sep 2022 14:34:16.342 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 13 Sep 2022 14:34:16.402 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 13 Sep 2022 14:34:16.434 # Configuration loaded
+1:M 13 Sep 2022 14:34:16.456 * monotonic clock: POSIX clock_gettime
+1:M 13 Sep 2022 14:34:16.556 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 13 Sep 2022 14:34:16.616 * Running mode=standalone, port=6379.
+1:M 13 Sep 2022 14:34:16.723 # Server initialized
+1:M 13 Sep 2022 14:34:16.796 * Ready to accept connections
+1:C 15 Sep 2022 14:41:01.665 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 15 Sep 2022 14:41:01.671 # Redis version=6.2.7, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 15 Sep 2022 14:41:01.677 # Configuration loaded
+1:M 15 Sep 2022 14:41:01.684 * monotonic clock: POSIX clock_gettime
+1:M 15 Sep 2022 14:41:01.690 # A key '__redis__compare_helper' was added to Lua globals which is not on the globals allow list nor listed on the deny list.
+1:M 15 Sep 2022 14:41:01.698 * Running mode=standalone, port=6379.
+1:M 15 Sep 2022 14:41:01.701 # Server initialized
+1:M 15 Sep 2022 14:41:01.708 * Ready to accept connections

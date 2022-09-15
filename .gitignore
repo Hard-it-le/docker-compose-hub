@@ -13,4 +13,5 @@
 /zk-kafka/zookeeper/datalog/*
 /zk-kafka/zookeeper/logs/*
 /zk-kafka/kafka/*
-/pgsql/postgres/
+/pgsql/postgres/*
+/mysql/single/data/*
