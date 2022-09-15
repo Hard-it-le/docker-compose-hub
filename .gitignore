@@ -31,7 +31,7 @@
 
 ## pgSql
 /pgsql/postgres/
-/pgsql/postgres/base/
+/pgsql/postgres/
 
 ## redis
 /redis/redis-cluster/*/data/
