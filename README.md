@@ -16,13 +16,13 @@ About Docker-Compose：
 
 | middleware                                                                                    | Info                                | --  | --  |     |
 | --------------------------------------------------------------------------------------------- | ----------------------------------- | --- | --- | --- |
-| [Redis-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/redis/redis-single) | Redis-v6.2.7-single                 |     |     |     |
-| [MySQL-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/mysql/mysql-single) | Mysql-v8.0.27-single                |     |     |     |
-| [ELK-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/es-logs-kibana)       | ELK-v7.17.4-single                  |     |     |     |
-| [PgSQL-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/pgsql)              | Pgsql-v14.5-single                  |     |     |     |
-| [Zk-Kafka-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/zk-kafka)        |                                     |     |     |     |
+| [redis-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/redis/redis-single) | Redis-v6.2.7-single                 |     |     |     |
+| [mySQL-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/mysql/mysql-single) | Mysql-v8.0.27-single                |     |     |     |
+| [elk-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/es-logs-kibana)       | ELK-v7.17.4-single                  |     |     |     |
+| [pgSQL-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/pgsql)              | Pgsql-v14.5-single                  |     |     |     |
+| [zk-kafka-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/zk-kafka)        |                                     |     |     |     |
 | [mongoDB-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/mongoDB)          | Monger-v6.0-single                  |     |     |     |
-| [Neo4j-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/neo4j)              | Neo4j-vneo4j:4.4.9-community-single |     |     |     |
+| [neo4j-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/neo4j)              | Neo4j-vneo4j:4.4.9-community-single |     |     |     |
 |                                                                                               |                                     |     |     |     |
 
 ### Cluster
