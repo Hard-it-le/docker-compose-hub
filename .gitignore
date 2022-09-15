@@ -1,15 +1,38 @@
+## mac
 .DS_Store
-/es-kibana-logs/es/data/*
-/es-kibana-logs/es/plugins/*
-/es-kibana-logs/authing
+
+## idea
+
+.idea
+
+## es-logs-kibana
+/es-logs-kibana/es/data/*
+/es-logs-kibana/es/plugins/*
+/es-logs-kibana/authing
+
+## mongoDB
 /mongoDB/config/*
 /mongoDB/db/*
 /mongoDB/log/*
+
+## mysql
 /mysql/single/data/*
+
+## neo4j
 /neo4j/data
 /neo4j/logs
+
+## zk-kafka
 /zk-kafka/zookeeper/data/*
 /zk-kafka/zookeeper/datalog/*
 /zk-kafka/zookeeper/logs/*
 /zk-kafka/kafka/*
-/pgsql/postgres/*
+
+## pgSql
+/pgsql/postgres/
+/pgsql/postgres/base/
+
+## redis
+/redis/redis-cluster/**/data/
+/redis/redis-cluster/**/logs/
+
