@@ -1,12 +1,11 @@
 .DS_Store
-/es-kibana/es/data/*
-/es-kibana/es/plugins/*
-/es-kibana/authing
+/es-kibana-logs/es/data/*
+/es-kibana-logs/es/plugins/*
+/es-kibana-logs/authing
 /mongoDB/config/*
 /mongoDB/db/*
 /mongoDB/log/*
-/mysql/data
-/mysql/init
+/mysql/single/data/*
 /neo4j/data
 /neo4j/logs
 /zk-kafka/zookeeper/data/*
@@ -14,4 +13,3 @@
 /zk-kafka/zookeeper/logs/*
 /zk-kafka/kafka/*
 /pgsql/postgres/*
-/mysql/single/data/*
