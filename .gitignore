@@ -33,9 +33,9 @@
 /pgsql/postgres/base/
 
 ## redis
-/redis/redis-cluster/**/data/
-/redis/redis-cluster/**/logs/
-/redis/redis-single/**/data/
-/redis/redis-single/**/logs/
+/redis/redis-cluster/*/data/
+/redis/redis-cluster/*/logs/
+/redis/redis-single/data/
+/redis/redis-single/logs/
 
 
