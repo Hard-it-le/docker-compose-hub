@@ -16,7 +16,8 @@
 /mongoDB/log/*
 
 ## mysql
-/mysql/single/data/*
+/mysql/mysql-single/data/*
+/mysql/mysql-cluster/*/data/*
 
 ## neo4j
 /neo4j/data
