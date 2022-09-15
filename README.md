@@ -16,13 +16,13 @@ About Docker-Compose：
 
 | middleware                                                                                    | Info                                | --  | --  |     |
 | --------------------------------------------------------------------------------------------- | ----------------------------------- | --- | --- | --- |
-| [redis-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/redis/redis-single) | Redis-v6.2.7-single                 |     |     |     |
-| [mySQL-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/mysql/mysql-single) | Mysql-v8.0.27-single                |     |     |     |
-| [elk-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/es-logs-kibana)       | ELK-v7.17.4-single                  |     |     |     |
-| [pgSQL-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/pgsql)              | Pgsql-v14.5-single                  |     |     |     |
+| [redis-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/redis/redis-single) | redis-v6.2.7-single                 |     |     |     |
+| [mySQL-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/mysql/mysql-single) | mysql-v8.0.27-single                |     |     |     |
+| [elk-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/es-logs-kibana)       | elk-v7.17.4-single                  |     |     |     |
+| [pgSQL-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/pgsql)              | pgsql-v14.5-single                  |     |     |     |
 | [zk-kafka-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/zk-kafka)        |                                     |     |     |     |
-| [mongoDB-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/mongoDB)          | Monger-v6.0-single                  |     |     |     |
-| [neo4j-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/neo4j)              | Neo4j-vneo4j:4.4.9-community-single |     |     |     |
+| [mongoDB-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/mongoDB)          | monger-v6.0-single                  |     |     |     |
+| [neo4j-single](https://github.com/Hard-it-le/docker-compose-hub/tree/main/neo4j)              | neo4j-vneo4j:4.4.9-community-single |     |     |     |
 |                                                                                               |                                     |     |     |     |
 
 ### Cluster
