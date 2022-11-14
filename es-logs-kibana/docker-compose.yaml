@@ -17,13 +17,6 @@ services:
       - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
       - "discovery.type=single-node" #以单一节点模式启动
       - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m" #设置使用jvm内存大小
-    deploy:
-      resources:
-        limits:
-          cpu: '0.50'
-          memory: 200M
-        reservations:
-          memory: 100M
     networks:
       - elk
 
@@ -48,13 +41,6 @@ services:
       MONITORING_ENABLED: false
     links:
       - elasticsearch:es #可以用es这个域名访问elasticsearch服务
-    deploy:
-      resources:
-        limits:
-          cpu: '0.50'
-          memory: 200M
-        reservations:
-          memory: 100M
     networks:
       - elk
     depends_on:
@@ -75,13 +61,6 @@ services:
       - ELASTICSEARCH_URL=http://elasticsearch:9200 #设置访问elasticsearch的地址
       - "elasticsearch.hosts=http://es:9200" #设置访问elasticsearch的地址
       - I18N_LOCALE=zh-CN
-    deploy:
-      resources:
-        limits:
-          cpu: '0.50'
-          memory: 200M
-        reservations:
-          memory: 100M
     networks:
       - elk
     depends_on:

@@ -15,13 +15,6 @@ services:
       ADMIN_USER: "root" #当前容器用于拥有创建账号功能的数据库账号
       ADMIN_PASSWORD: "rootroot"
       TZ: "Asia/Shanghai" #解决时区问题
-    deploy:
-      resources:
-        limits:
-          cpu: '0.50'
-          memory: 200M
-        reservations:
-          memory: 100M
     command:
     -  "--max_connections=1000"
     -  "--character-set-server=utf8mb4"
