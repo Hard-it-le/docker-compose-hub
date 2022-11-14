@@ -16,6 +16,13 @@ services:
       - postgres
     restart: always
     privileged: true
+    deploy:
+      resources:
+        limits:
+          cpu: '0.50'
+          memory: 200M
+        reservations:
+          memory: 100M
 
 networks:
   postgres:

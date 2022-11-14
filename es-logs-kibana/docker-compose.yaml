@@ -5,7 +5,7 @@ services:
   elasticsearch:
     image: elasticsearch:7.17.4
     volumes:
-      - /etc/localtime:/etc/localtime
+      # - /etc/localtime:/etc/localtime
       - ./es/plugins:/usr/share/elasticsearch/plugins #插件文件挂载
       - ./es/data:/usr/share/elasticsearch/data #数据文件挂载
     ports:
@@ -17,6 +17,13 @@ services:
       - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
       - "discovery.type=single-node" #以单一节点模式启动
       - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m" #设置使用jvm内存大小
+    deploy:
+      resources:
+        limits:
+          cpu: '0.50'
+          memory: 200M
+        reservations:
+          memory: 100M
     networks:
       - elk
 
@@ -25,7 +32,7 @@ services:
     container_name: logstash
     restart: always
     volumes:
-      - /etc/localtime:/etc/localtime
+      # - /etc/localtime:/etc/localtime
       - "./logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml"
       - "./logstash/logstash-audit.conf:/usr/share/logstash/pipeline/logstash-audit.conf"
       - "./logstash/logstash-user-action.conf:/usr/share/logstash/pipeline/logstash-user-action.conf"
@@ -41,6 +48,13 @@ services:
       MONITORING_ENABLED: false
     links:
       - elasticsearch:es #可以用es这个域名访问elasticsearch服务
+    deploy:
+      resources:
+        limits:
+          cpu: '0.50'
+          memory: 200M
+        reservations:
+          memory: 100M
     networks:
       - elk
     depends_on:
@@ -51,7 +65,7 @@ services:
     container_name: kibana
     restart: always
     volumes:
-      - /etc/localtime:/etc/localtime
+      # - /etc/localtime:/etc/localtime
       - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
     ports:
       - "5601:5601"
@@ -61,6 +75,13 @@ services:
       - ELASTICSEARCH_URL=http://elasticsearch:9200 #设置访问elasticsearch的地址
       - "elasticsearch.hosts=http://es:9200" #设置访问elasticsearch的地址
       - I18N_LOCALE=zh-CN
+    deploy:
+      resources:
+        limits:
+          cpu: '0.50'
+          memory: 200M
+        reservations:
+          memory: 100M
     networks:
       - elk
     depends_on:

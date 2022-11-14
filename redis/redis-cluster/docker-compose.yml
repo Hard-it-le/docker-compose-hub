@@ -18,6 +18,13 @@ services:
     privileged: true
     networks:
       - redis-cluster
+    deploy:
+      resources:
+        limits:
+          cpu: '0.50'
+          memory: 200M
+        reservations:
+          memory: 100M
   redis-slave1:
     image: redis:6.2.7
     container_name: redis-slave1
@@ -35,6 +42,13 @@ services:
     depends_on:
       - redis-master
     privileged: true
+    deploy:
+      resources:
+        limits:
+          cpu: '0.50'
+          memory: 200M
+        reservations:
+          memory: 100M
     networks:
       - redis-cluster
   redis-slave2:
@@ -54,6 +68,13 @@ services:
     depends_on:
       - redis-master
     privileged: true
+    deploy:
+      resources:
+        limits:
+          cpu: '0.50'
+          memory: 200M
+        reservations:
+          memory: 100M
     networks:
       - redis-cluster
 

@@ -6,7 +6,7 @@ services:
     container_name: redis
     restart: always
     ports:
-      - 16379:6379
+      - 6379:6379
     environment:
       TZ: "Asia/Shanghai"
     volumes:
@@ -16,3 +16,10 @@ services:
       - ./logs:/logs
     command: [ "redis-server", "/etc/redis/redis.conf" ]
     privileged: true
+    deploy:
+      resources:
+        limits:
+          cpu: '0.50'
+          memory: 200M
+        reservations:
+          memory: 100M
