@@ -24,10 +24,10 @@
 /neo4j/logs
 
 ## zk-kafka
-/zk-kafka/zookeeper/data/*
-/zk-kafka/zookeeper/datalog/*
-/zk-kafka/zookeeper/logs/*
-/zk-kafka/kafka/*
+/mac-zk-kafka/zookeeper/data/*
+/mac-zk-kafka/zookeeper/datalog/*
+/mac-zk-kafka/zookeeper/logs/*
+/mac-zk-kafka/kafka/*
 
 ## pgSql
 /pgsql/postgres/

@@ -1,6 +1,5 @@
 version: '3.2'
 
-
 services:
   elasticsearch:
     image: elasticsearch:7.17.4
@@ -73,5 +72,4 @@ networks:
       #  ik 分词器的安装
 
       # 集群 docker-compose exec elasticsearch elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.4/elasticsearch-analysis-ik-7.17.4.zip
-
       # 单点 bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.4/elasticsearch-analysis-ik-7.17.4.zip
