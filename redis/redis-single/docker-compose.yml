@@ -6,7 +6,7 @@ services:
     container_name: redis
     restart: always
     ports:
-      - 6379:6379
+      - 16379:6379
     environment:
       TZ: "Asia/Shanghai"
     volumes:
@@ -14,5 +14,5 @@ services:
       - ./conf/redis.conf:/etc/redis/redis.conf
       - ./data:/data
       - ./logs:/logs
-    command: [ "redis-server", "/etc/redis/redis.conf" ]
+    command: ["redis-server", "/etc/redis/redis.conf" ]
     privileged: true
