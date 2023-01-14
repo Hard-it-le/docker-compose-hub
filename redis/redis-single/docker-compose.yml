@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   redis:
-    image: redis:6.2.7
+    image: redis:6.2.8-alpine
     container_name: redis
     restart: always
     ports:
@@ -16,3 +16,17 @@ services:
       - ./logs:/logs
     command: ["redis-server", "/etc/redis/redis.conf" ]
     privileged: true
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 500M
+
+    networks:
+      - redis-single
+
+networks:
+  redis-single:
+    name: redis-single
+    driver: bridge
+

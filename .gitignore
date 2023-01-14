@@ -30,8 +30,8 @@
 /mac-zk-kafka/kafka/*
 
 ## pgSql
-/pgsql/postgres/
-/pgsql/postgres/
+/pgsql/data/
+/pgsql/data/
 
 ## redis
 /redis/redis-cluster/*/data/
