@@ -4,7 +4,6 @@ services:
   elasticsearch:
     image: elasticsearch:7.17.4
     volumes:
-      # - /etc/localtime:/etc/localtime
       - ./es/plugins:/usr/share/elasticsearch/plugins #插件文件挂载
       - ./es/data:/usr/share/elasticsearch/data #数据文件挂载
     ports:
@@ -13,18 +12,23 @@ services:
     container_name: elasticsearch
     restart: always
     environment:
+      - "TZ=Asia/Shanghai"
       - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
       - "discovery.type=single-node" #以单一节点模式启动
       - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m" #设置使用jvm内存大小
     networks:
       - elk
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 4096M
 
   logstash:
     image: logstash:7.17.4
     container_name: logstash
     restart: always
     volumes:
-      # - /etc/localtime:/etc/localtime
       - "./logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml"
       - "./logstash/logstash-audit.conf:/usr/share/logstash/pipeline/logstash-audit.conf"
       - "./logstash/logstash-user-action.conf:/usr/share/logstash/pipeline/logstash-user-action.conf"
@@ -44,6 +48,11 @@ services:
       - elk
     depends_on:
       - elasticsearch
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 2048M
 
   kibana:
     image: kibana:7.17.4
@@ -64,6 +73,11 @@ services:
       - elk
     depends_on:
       - elasticsearch
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 1024M
 
 networks:
   elk:
