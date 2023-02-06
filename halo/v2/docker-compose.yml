@@ -1,0 +1,25 @@
+version: "3.2"
+
+services:
+  halo_server:
+    image: halohub/halo:1.6.0
+    container_name: halo
+    restart: on-failure:3
+    volumes:
+      - /data/blog/halo:/root/.halo
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "18090:8090"
+    environment:
+      - SERVER_PORT=8090
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.h2.Driver
+      - SPRING_DATASOURCE_URL=jdbc:h2:file:~/.halo/db/halo
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - HALO_ADMIN_PATH=haloAdmin
+      - HALO_CACHE=memory
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 1536M

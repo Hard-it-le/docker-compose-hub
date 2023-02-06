@@ -4,18 +4,17 @@ services:
     image: mongo:6.0
     container_name: mongodb
     ports:
-      - 27017:27017
+      - "27017:27017"
     restart: always
     volumes:
      - ./db:/data/db    # 挂载数据文件，
      - ./log:/var/log/mongodb  # 挂载日志文件，
      - ./config:/etc/mongo  # 挂载配置文件
-     - /etc/localtime:/etc/localtime
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=admin
       - TZ=Asia/Shanghai
-      - wiredTigerCacheSizeGB=1.5
+      - wiredTigerCacheSizeGB=1
 networks:
   mongodb:
     name: mongodb

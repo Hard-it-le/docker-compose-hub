@@ -4,6 +4,9 @@ services:
   postgres:
     container_name: postgres
     image: postgres:15.1-alpine
+    restart: always
+    ports:
+      - "15432:5432"
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
@@ -11,12 +14,9 @@ services:
       TZ: "Asia/Shanghai"
     volumes:
       - ./data:/data/postgres
-
-    ports:
-      - "15432:5432"
     networks:
       - postgres
-    restart: always
+
     privileged: true
 
 networks:

@@ -1,12 +1,12 @@
-version: '3.2'
+version: '3.7'
 
 services:
   redis-master:
-    image: redis:6.2.7
+    image: redis:6.2.8-alpine
     container_name: redis-master
     restart: always
     ports:
-      - 6379:6379
+      - "6379:6379"
     environment:
       TZ: "Asia/Shanghai"
     volumes:
@@ -18,12 +18,13 @@ services:
     privileged: true
     networks:
       - redis-cluster
+
   redis-slave1:
-    image: redis:6.2.7
+    image: redis:6.2.8-alpine
     container_name: redis-slave1
     restart: always
     ports:
-      - 6380:6379
+      - "6380:6379"
     environment:
       TZ: "Asia/Shanghai"
     volumes:
@@ -37,12 +38,13 @@ services:
     privileged: true
     networks:
       - redis-cluster
+
   redis-slave2:
-    image: redis:6.2.7
+    image: redis:6.2.8-alpine
     container_name: redis-slave2
     restart: always
     ports:
-      - 6381:6379
+      - "6381:6379"
     environment:
       TZ: "Asia/Shanghai"
     volumes:

@@ -16,8 +16,8 @@
 /mongoDB/log/*
 
 ## mysql
-/mysql/mysql-single/data/*
-/mysql/mysql-cluster/*/data/*
+/mysql/single/data/*
+/mysql/cluster/*/data/*
 
 ## neo4j
 /neo4j/data
@@ -34,9 +34,9 @@
 /pgsql/data/
 
 ## redis
-/redis/redis-cluster/*/data/
-/redis/redis-cluster/*/logs/
-/redis/redis-single/data/
-/redis/redis-single/logs/
+/redis/cluster/*/data/
+/redis/cluster/*/logs/
+/redis/single/data/
+/redis/single/logs/
 
 
