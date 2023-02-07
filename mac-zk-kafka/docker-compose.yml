@@ -1,8 +1,8 @@
-version: '3.2'
+version: '3.7'
 
 services:
   zookeeper:
-    image: zookeeper
+    image: zookeeper:3.6
     restart: always
     ports:
       - "2181:2181"
@@ -11,6 +11,10 @@ services:
       - ./zookeeper/logs:/logs
       - ./zookeeper/config:/conf
       - ./zookeeper/datalog:/datalog
+    environment:
+      # 匿名登录--必须开启
+      - ALLOW_ANONYMOUS_LOGIN=yes
+      - TZ=Asia/Shanghai
     container_name: zookeeper
     networks:
       - zk-kafka
@@ -21,7 +25,7 @@ services:
     ports:
       - "9092:9092"
     environment:
-      KAFKA_BROKER_ID: 0
+      KAFKA_BROKER_ID: 1
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
       KAFKA_ADVERTISED_HOST_NAME: "127.0.0.1"
       KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
