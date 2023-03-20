@@ -30,7 +30,8 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: "127.0.0.1"
       KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
     volumes:
-      - ./kafka:/kafka
+      - ./kafka/data:/kafka
+      - ./kafka/logs:/opt/kafka/logs
     depends_on:
       - zookeeper
     container_name: kafka

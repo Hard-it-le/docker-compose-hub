@@ -27,6 +27,5 @@ services:
 
 networks:
   redis-single:
-    name: redis-single
     driver: bridge
 
