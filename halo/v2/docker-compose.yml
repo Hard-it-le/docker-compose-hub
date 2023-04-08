@@ -1,25 +1,57 @@
-version: "3.2"
+version: "3"
 
 services:
-  halo_server:
-    image: halohub/halo:1.6.0
-    container_name: halo
-    restart: on-failure:3
+  halo:
+    image: halohub/halo:2.4
+    container_name: halo2
+    restart: always
+    depends_on:
+      halodb:
+        condition: service_healthy
+    networks:
+      halo_network:
     volumes:
-      - /data/blog/halo:/root/.halo
-      - /etc/localtime:/etc/localtime:ro
+      - ./halo:/root/.halo2
     ports:
-      - "18090:8090"
+      - "8090:8090"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8090/actuator/health/readiness"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    command:
+      - --spring.r2dbc.url=r2dbc:pool:postgresql://halodb/halo
+      - --spring.r2dbc.username=halo
+      # PostgreSQL 的密码，请保证与下方 POSTGRES_PASSWORD 的变量值一致。
+      - --spring.r2dbc.password=halo
+      - --spring.sql.init.platform=postgresql
+      # 外部访问地址，请根据实际需要修改
+      - --halo.external-url=http://localhost:8090/
+      # 初始化的超级管理员用户名
+      - --halo.security.initializer.superadminusername=admin
+      # 初始化的超级管理员密码
+      - --halo.security.initializer.superadminpassword=admin104802
+  halodb:
+    image: postgres:15.1-alpine
+    container_name: halodb
+    restart: always
+    networks:
+      halo_network:
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     environment:
-      - SERVER_PORT=8090
-      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.h2.Driver
-      - SPRING_DATASOURCE_URL=jdbc:h2:file:~/.halo/db/halo
-      - SPRING_DATASOURCE_USERNAME=admin
-      - SPRING_DATASOURCE_PASSWORD=admin
-      - HALO_ADMIN_PATH=haloAdmin
-      - HALO_CACHE=memory
-    deploy:
-      resources:
-        limits:
-          cpus: '0.75'
-          memory: 1536M
+      - POSTGRES_PASSWORD=halo
+      - POSTGRES_USER=halo
+      - POSTGRES_DB=halo
+      - PGUSER=halo
+
+networks:
+  halo_network:
